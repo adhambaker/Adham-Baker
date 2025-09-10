@@ -1,0 +1,182 @@
+.header{
+  width: 100%;
+  padding: 10px 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
+}
+.menu .company-name-mobile {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 22px;
+  font-family: 'Jost';
+}
+.menu .description-moblie {
+  margin-bottom: 10px;
+  font-family: 'Jost';
+}
+.action-btn-mobile {
+  background-color: yellow;
+  overflow: hidden;
+  position: relative;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 220px;
+  height: 50px;
+  gap:10px;
+  font-family: 'Jost';
+  transition: all 0.3s ease;
+}
+
+.action-btn-mobile::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background : black;
+  left: 0;
+  bottom: 0;
+  transition: all .3s;
+  opacity: 1;
+}
+
+.action-btn-mobile:hover::after {
+  width: 100%;
+}
+
+.action-btn-mobile:hover {
+  color: white;
+}
+
+
+.company-name{
+  padding: 0;
+  margin-top:30px;
+  margin-left: 10px;
+  order: 1;
+  font-weight: 600;
+  font-size: 22px;
+  font-family: 'Jost';
+}
+
+.description{
+  align-items: center;
+  order: 2;
+  font-family: 'Jost';
+}
+
+
+.choose-gift-button{
+  background-color: yellow;
+  overflow: hidden;
+  position: relative;
+  order: 3;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 220px;
+  height: 50px;
+  gap:10px;
+  font-family: 'Jost';
+  transition: all 0.3s ease;
+}
+
+.choose-gift-button::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background : black;
+  left: 0;
+  bottom: 0;
+  transition: all .3s;
+  opacity: 1;
+}
+button span {
+  position: relative;
+  z-index: 1;
+}
+
+.choose-gift-button:hover::after {
+  width: 100%;
+}
+
+.choose-gift-button:hover {
+  color: white;
+}
+
+.arrow{
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .company-name {
+    text-align: center;
+    margin: auto;
+  }
+
+  .menu {
+    display: flex;
+    position: absolute;
+    top:100%;
+    z-index: 9999;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .header{
+    justify-content: center;
+    position: relative;
+  }
+  .burger {
+    position: absolute;
+    left: 20px;
+  }
+
+  .discription{
+    display: none;
+  }
+  .choose-gift-button{
+    display: none;
+  }
+}
